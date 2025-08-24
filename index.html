@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Matemática</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1>Calculadora de Funciones</h1>
+        <div class="subtitle">Herramientas matemáticas básicas</div>
+    </header>
+
+    <main class="calculator-grid">
+        <div class="calc-card">
+            <h3>Valor de PI</h3>
+            <button onclick="showPI()" class="action-btn">Ver PI</button>
+            <div id="pi-result" class="output"></div>
+        </div>
+
+        <div class="calc-card">
+            <h3>Valor Absoluto</h3>
+            <input type="number" id="abs-input" placeholder="Número">
+            <button onclick="calculateAbs()" class="action-btn">Calcular</button>
+            <div id="abs-result" class="output"></div>
+        </div>
+
+        <div class="calc-card">
+            <h3>Redondeo Normal</h3>
+            <input type="number" id="round-input" placeholder="Decimal" step="0.1">
+            <button onclick="calculateRound()" class="action-btn">Redondear</button>
+            <div id="round-result" class="output"></div>
+        </div>
+
+        <div class="calc-card">
+            <h3>Redondeo Superior</h3>
+            <input type="number" id="ceil-input" placeholder="Decimal" step="0.1">
+            <button onclick="calculateCeil()" class="action-btn">Hacia Arriba</button>
+            <div id="ceil-result" class="output"></div>
+        </div>
+
+        <div class="calc-card">
+            <h3>Redondeo Inferior</h3>
+            <input type="number" id="floor-input" placeholder="Decimal" step="0.1">
+            <button onclick="calculateFloor()" class="action-btn">Hacia Abajo</button>
+            <div id="floor-result" class="output"></div>
+        </div>
+
+        <div class="calc-card">
+            <h3>Número Aleatorio</h3>
+            <button onclick="generateRandom()" class="action-btn">Generar</button>
+            <div id="random-result" class="output"></div>
+        </div>
+
+        <div class="calc-card">
+            <h3>Potencia</h3>
+            <div class="input-group">
+                <input type="number" id="pow-base" placeholder="Base">
+                <input type="number" id="pow-exponent" placeholder="Exponente">
+            </div>
+            <button onclick="calculatePow()" class="action-btn">Elevar</button>
+            <div id="pow-result" class="output"></div>
+        </div>
+
+        <div class="calc-card">
+            <h3>Raíz Cuadrada</h3>
+            <input type="number" id="sqrt-input" placeholder="Número" min="0">
+            <button onclick="calculateSqrt()" class="action-btn">Calcular √</button>
+            <div id="sqrt-result" class="output"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
